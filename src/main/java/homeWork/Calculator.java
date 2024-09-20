@@ -6,16 +6,16 @@ sum(), multiply(), divide(), subtract(). Параметры этих метод�
 public class Calculator {
 
     public static <A extends Number, B extends Number> Double sum( A a, B b){
-        return (Double)a+(Double)b;
+        return (((Number)a).doubleValue()+((Number)b).doubleValue());
     }
 
     public static <A extends Number, B extends Number> Double multiply( A a, B b){
-        return (Double)a*(Double)b;
+        return (((Number)a).doubleValue()*((Number)b).doubleValue());
     }
 
     public static <A extends Number, B extends Number> Double divide( A a, B b){
         try {
-            return (Double)a/(Double)b;
+            return (((Number)a).doubleValue()/((Number)b).doubleValue());
         } catch (ArithmeticException e){
             System.out.println("Деление на 0!");
             return 0.0;
@@ -23,7 +23,7 @@ public class Calculator {
     }
 
     public static <A extends Number, B extends Number> Double subtract( A a, B b){
-        return (Double)a-(Double)b;
+        return (((Number)a).doubleValue()-((Number)b).doubleValue());
     }
 
 }

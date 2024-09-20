@@ -4,5 +4,7 @@ package homeWork;
 а также переопределение метода toString(), возвращающее строковое представление пары.
 Работу сдать в виде ссылки на гит репозиторий. */
 
-public class Pair {
+public class Pair<F,S> {
+    private F first;
+    private S second;
 }
